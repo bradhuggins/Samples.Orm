@@ -1,0 +1,31 @@
+﻿ADO.NET Entity Framework on MSDN - http://msdn.microsoft.com/en-us/library/bb399572.aspx 
+   - & @  http://msdn.microsoft.com/en-us/data/aa937723.aspx
+
+Entity Framework Videos
+http://msdn.microsoft.com/en-us/data/videos.aspx
+
+Entity Framework - Anti-Patterns To Avoid In N-Tier Applications
+http://msdn.microsoft.com/en-us/magazine/dd882522.aspx
+
+Entity Framework - N-Tier Application Patterns
+http://msdn.microsoft.com/en-us/magazine/ee321569.aspx
+
+Entity Framework - Building N-Tier Apps with EF4
+http://msdn.microsoft.com/en-us/magazine/ee335715.aspx
+
+Entity Framework FAQ
+http://blogs.msdn.com/dsimmons/pages/entity-framework-faq.aspx
+
+Using Repository Pattern with Entity Framework
+http://blogs.microsoft.co.il/blogs/gilf/archive/2010/01/20/using-repository-pattern-with-entity-framework.aspx
+
+POCO in the Entity Framework: Part 1 - The Experience
+http://blogs.msdn.com/adonet/archive/2009/05/21/poco-in-the-entity-framework-part-1-the-experience.aspx
+
+POCO in the Entity Framework : Part 2 – Complex Types, Deferred Loading and Explicit Loading
+http://blogs.msdn.com/adonet/archive/2009/05/28/poco-in-the-entity-framework-part-2-complex-types-deferred-loading-and-explicit-loading.aspx
+
+
+Using stored procedures with Entity Framework
+http://msdn.microsoft.com/en-us/data/ff657848.aspx
+http://msdn.microsoft.com/en-us/vcsharp/dd565862.aspx

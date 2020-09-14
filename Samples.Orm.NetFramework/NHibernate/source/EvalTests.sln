@@ -1,0 +1,117 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{7F36CD92-0CC8-44C5-8392-B39EC478261C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82EAD4BD-3251-47AD-B078-1DF8E5355ADF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{949A1F2C-4C95-4A6E-8F47-0020D8C79E9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{A401A2CD-C540-44BE-B4A9-A1B187230EC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHibernate", "NHibernate", "{E917CBB3-206F-424C-AB5C-01AB750A22F7}"
+	ProjectSection(SolutionItems) = preProject
+		tools\NHibernate\NHibernate-2.1.2.GA-bin.zip = tools\NHibernate\NHibernate-2.1.2.GA-bin.zip
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net", "net", "{6839A956-55CB-4575-9002-1AB7EC632236}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHibernate", "NHibernate", "{50D8CD0E-7CB5-4FA0-882E-E9E1FCC9C178}"
+	ProjectSection(SolutionItems) = preProject
+		lib\NHibernate\Antlr3.Runtime.dll = lib\NHibernate\Antlr3.Runtime.dll
+		lib\NHibernate\Iesi.Collections.dll = lib\NHibernate\Iesi.Collections.dll
+		lib\NHibernate\Iesi.Collections.xml = lib\NHibernate\Iesi.Collections.xml
+		lib\NHibernate\log4net.dll = lib\NHibernate\log4net.dll
+		lib\NHibernate\log4net.license.txt = lib\NHibernate\log4net.license.txt
+		lib\NHibernate\log4net.xml = lib\NHibernate\log4net.xml
+		lib\NHibernate\nhibernate-configuration.xsd = lib\NHibernate\nhibernate-configuration.xsd
+		lib\NHibernate\nhibernate-mapping.xsd = lib\NHibernate\nhibernate-mapping.xsd
+		lib\NHibernate\NHibernate.dll = lib\NHibernate\NHibernate.dll
+		lib\NHibernate\NHibernate.xml = lib\NHibernate\NHibernate.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalTest.SimpleBLL", "src\net\EvalTest.SimpleBLL\EvalTest.SimpleBLL.csproj", "{3212C5D3-BEBC-4EA2-9FD4-F8BD9545305A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net", "net", "{A8FF68F7-37F7-4810-965D-15813E44A19F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A95B1EE7-2831-4D2A-8F78-4912D01E4AFB}"
+	ProjectSection(SolutionItems) = preProject
+		EvalTests1.vsmdi = EvalTests1.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalTest.ORM", "src\net\EvalTest.ORM\EvalTest.ORM.csproj", "{2DD6F419-A159-4E84-90BA-DF39F9950B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalTest.ORM.Tester", "test\net\EvalTest.ORM.Tester\EvalTest.ORM.Tester.csproj", "{7C74E070-28B1-4111-B7C1-47D5D75BDDBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinFu", "LinFu", "{FFA7594C-4835-4312-BA1E-58749CD5693B}"
+	ProjectSection(SolutionItems) = preProject
+		lib\NHibernate\LinFu\LinFu.DynamicProxy.dll = lib\NHibernate\LinFu\LinFu.DynamicProxy.dll
+		lib\NHibernate\LinFu\LinFu.License.txt = lib\NHibernate\LinFu\LinFu.License.txt
+		lib\NHibernate\LinFu\NHibernate.ByteCode.LinFu.dll = lib\NHibernate\LinFu\NHibernate.ByteCode.LinFu.dll
+		lib\NHibernate\LinFu\NHibernate.ByteCode.LinFu.xml = lib\NHibernate\LinFu\NHibernate.ByteCode.LinFu.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{4270EF38-C08A-4FDB-8367-A584EB73CEAC}"
+	ProjectSection(SolutionItems) = preProject
+		src\sql\CreateDBObjects.sql = src\sql\CreateDBObjects.sql
+		src\sql\SeedTestData.sql = src\sql\SeedTestData.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://avha8d30:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = src\\net\\EvalTest.SimpleBLL\\EvalTest.SimpleBLL.csproj
+		SccProjectTopLevelParentUniqueName1 = EvalTests.sln
+		SccProjectName1 = src/net/EvalTest.SimpleBLL
+		SccLocalPath1 = src\\net\\EvalTest.SimpleBLL
+		SccProjectUniqueName2 = src\\net\\EvalTest.ORM\\EvalTest.ORM.csproj
+		SccProjectTopLevelParentUniqueName2 = EvalTests.sln
+		SccProjectName2 = src/net/EvalTest.ORM
+		SccLocalPath2 = src\\net\\EvalTest.ORM
+		SccProjectUniqueName3 = test\\net\\EvalTest.ORM.Tester\\EvalTest.ORM.Tester.csproj
+		SccProjectTopLevelParentUniqueName3 = EvalTests.sln
+		SccProjectName3 = test/net/EvalTest.ORM.Tester
+		SccLocalPath3 = test\\net\\EvalTest.ORM.Tester
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = EvalTests1.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3212C5D3-BEBC-4EA2-9FD4-F8BD9545305A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3212C5D3-BEBC-4EA2-9FD4-F8BD9545305A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3212C5D3-BEBC-4EA2-9FD4-F8BD9545305A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3212C5D3-BEBC-4EA2-9FD4-F8BD9545305A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD6F419-A159-4E84-90BA-DF39F9950B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD6F419-A159-4E84-90BA-DF39F9950B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD6F419-A159-4E84-90BA-DF39F9950B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD6F419-A159-4E84-90BA-DF39F9950B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C74E070-28B1-4111-B7C1-47D5D75BDDBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C74E070-28B1-4111-B7C1-47D5D75BDDBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C74E070-28B1-4111-B7C1-47D5D75BDDBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C74E070-28B1-4111-B7C1-47D5D75BDDBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50D8CD0E-7CB5-4FA0-882E-E9E1FCC9C178} = {7F36CD92-0CC8-44C5-8392-B39EC478261C}
+		{6839A956-55CB-4575-9002-1AB7EC632236} = {82EAD4BD-3251-47AD-B078-1DF8E5355ADF}
+		{4270EF38-C08A-4FDB-8367-A584EB73CEAC} = {82EAD4BD-3251-47AD-B078-1DF8E5355ADF}
+		{A8FF68F7-37F7-4810-965D-15813E44A19F} = {949A1F2C-4C95-4A6E-8F47-0020D8C79E9F}
+		{E917CBB3-206F-424C-AB5C-01AB750A22F7} = {A401A2CD-C540-44BE-B4A9-A1B187230EC8}
+		{3212C5D3-BEBC-4EA2-9FD4-F8BD9545305A} = {6839A956-55CB-4575-9002-1AB7EC632236}
+		{2DD6F419-A159-4E84-90BA-DF39F9950B55} = {6839A956-55CB-4575-9002-1AB7EC632236}
+		{FFA7594C-4835-4312-BA1E-58749CD5693B} = {50D8CD0E-7CB5-4FA0-882E-E9E1FCC9C178}
+		{A95B1EE7-2831-4D2A-8F78-4912D01E4AFB} = {A8FF68F7-37F7-4810-965D-15813E44A19F}
+		{7C74E070-28B1-4111-B7C1-47D5D75BDDBC} = {A8FF68F7-37F7-4810-965D-15813E44A19F}
+	EndGlobalSection
+EndGlobal

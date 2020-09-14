@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EvalTest.SimpleBLL.Domain.Category">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Domain\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvalTest.SimpleBLL.Domain.Product">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAA=</HashCode>
+      <FileName>Domain\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="EvalTest.SimpleBLL.Domain.ICategoryRepository">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAABAAAAAAAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>Domain\ICategoryRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EvalTest.SimpleBLL.Domain.IProductRepository">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAQAAAAAAAAABABAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Domain\IProductRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

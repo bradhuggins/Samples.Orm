@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MyDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MyDatabaseModelStoreContainer">
+          <EntitySet Name="Category" EntityType="MyDatabaseModel.Store.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product" EntityType="MyDatabaseModel.Store.Product" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Product_Category" Association="MyDatabaseModel.Store.FK_Product_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="UnitPrice" Type="decimal" Scale="2" />
+          <Property Name="Discontinued" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Product_Category">
+          <End Role="Category" Type="MyDatabaseModel.Store.Category" Multiplicity="1" />
+          <End Role="Product" Type="MyDatabaseModel.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetProductByCategoryID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoryID" Type="int" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MyDatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="MyDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Products" EntityType="MyDatabaseModel.Product" />
+          <EntitySet Name="Categories" EntityType="MyDatabaseModel.Category" />
+          <AssociationSet Name="FK_Product_Category" Association="MyDatabaseModel.FK_Product_Category">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <FunctionImport Name="GetProductsByCategoryID" EntitySet="Products" ReturnType="Collection(MyDatabaseModel.Product)">
+            <Parameter Name="CategoryID" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="5" />
+          <Property Name="Discontinued" Type="Boolean" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryID" Nullable="false" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="MyDatabaseModel.FK_Product_Category" FromRole="Product" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Type="Int32" Name="CategoryID" Nullable="false" />
+          <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Products" Relationship="MyDatabaseModel.FK_Product_Category" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <Association Name="FK_Product_Category">
+          <End Type="MyDatabaseModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="MyDatabaseModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MyDatabaseModelStoreContainer" CdmEntityContainer="MyDatabaseEntities">
+          <EntitySetMapping Name="Products"><EntityTypeMapping TypeName="MyDatabaseModel.Product"><MappingFragment StoreEntitySet="Product">
+            <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+            <ScalarProperty Name="Discontinued" ColumnName="Discontinued" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="MyDatabaseModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetProductsByCategoryID" FunctionName="MyDatabaseModel.Store.GetProductByCategoryID" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="MyDatabase">
+        <EntityTypeShape EntityType="MyDatabaseModel.Product" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9210009765625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyDatabaseModel.Category" Width="1.5" PointX="3.375" PointY="0.875" Height="1.2636116536458335" />
+        <AssociationConnector Association="MyDatabaseModel.FK_Product_Category" >
+          <ConnectorPoint PointX="3.375" PointY="1.5889794921875002" />
+          <ConnectorPoint PointX="2.25" PointY="1.5889794921875002" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

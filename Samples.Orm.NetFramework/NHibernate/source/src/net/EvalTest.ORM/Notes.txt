@@ -1,0 +1,9 @@
+﻿NHibernate Forge - http://nhforge.org/Default.aspx
+
+Your First NHibernate app - http://nhforge.org/wikis/howtonh/your-first-nhibernate-based-application.aspx
+
+Reference/Docs - http://nhforge.org/doc/nh/en/index.html
+
+NHibernate and The Repository Pattern
+http://blogs.hibernatingrhinos.com/nhibernate/archive/2008/10/08/the-repository-pattern.aspx 
+
