@@ -1,0 +1,19 @@
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "telephoneNumbers": [
+    {
+      "telephoneNumberLabel": "Mobile",
+      "telephoneNumberValue": "214-555-1212"
+    }
+  ],
+  "addresses": [
+    {
+      "addressLabel": "Dallas City Hall",
+      "streetAddress1": "1500 Marilla St",
+      "city": "Dallas",
+      "state": "TX",
+      "postalCode": "75201"
+    }
+  ]
+}
