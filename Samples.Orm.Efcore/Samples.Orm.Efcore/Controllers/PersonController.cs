@@ -133,7 +133,7 @@ namespace Samples.Orm.Efcore.Controllers
 
             var personId = new SqlParameter("PersonId", System.Data.SqlDbType.Int);
             personId.Value = id;
-            _context.Database.ExecuteSqlCommand("EXEC sp_DeletePerson @PersonId", personId);
+            _context.Database.ExecuteSqlRaw("EXEC sp_DeletePerson @PersonId", personId);
 
             return Ok();
         }
