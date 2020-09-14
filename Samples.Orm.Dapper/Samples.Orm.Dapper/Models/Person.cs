@@ -10,6 +10,14 @@ namespace Samples.Orm.Dapper.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        public string DisplayName
+        {
+            get
+            {
+                return this.FirstName + " " + this.LastName;
+            }
+        }
+
         public List<TelephoneNumber> TelephoneNumbers { get; set; }
         public List<Address> Addresses { get; set; }
 
