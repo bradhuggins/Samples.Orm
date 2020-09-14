@@ -12,7 +12,6 @@ namespace Samples.Orm.Efcore.Tests.Controllers
     public abstract class ControllerTestsBase
     {
         internal MockDbContext _context;
-        internal NullDbContext _nullContext;
 
         [TestInitialize]
         public void Initalize()
@@ -24,14 +23,8 @@ namespace Samples.Orm.Efcore.Tests.Controllers
                 .EnableSensitiveDataLogging()
             );
 
-            services.AddDbContext<NullDbContext>(
-                options => options.UseInMemoryDatabase("NullTestsInMemoryDb-" + Guid.NewGuid().ToString())
-                .EnableSensitiveDataLogging()
-            );
-
             ServiceProvider serviceProvider = services.BuildServiceProvider();
             _context = serviceProvider.GetService<MockDbContext>();
-            _nullContext = serviceProvider.GetService<NullDbContext>();
         }
     }
 }
