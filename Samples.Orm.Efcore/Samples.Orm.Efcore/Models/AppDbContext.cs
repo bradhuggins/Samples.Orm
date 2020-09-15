@@ -23,7 +23,7 @@ namespace Samples.Orm.Efcore.Models
 
             EntityTypeBuilder<Person> person = modelBuilder.Entity<Person>();
             //// Map to a custom table name
-            // t.ToTable("CUSTOM_TABLE_NAME");
+            // person.ToTable("CUSTOM_TABLE_NAME");
 
             //// Definre primary key(s)
             person.HasKey(x => x.PersonId);

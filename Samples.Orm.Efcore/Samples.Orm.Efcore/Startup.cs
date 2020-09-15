@@ -33,7 +33,7 @@ namespace Samples.Orm.Efcore
                         )
                     .EnableSensitiveDataLogging()
 
-                    //.UseLoggerFactory(DbDebugLoggerFactory) 
+                    .UseLoggerFactory(DbDebugLoggerFactory) 
                     // Warning: Do not create a new ILoggerFactory instance each time
                     // https://docs.microsoft.com/en-us/ef/core/miscellaneous/logging
                 );
